@@ -1,4 +1,4 @@
-#Hotel-Management Booking
+#Hotel-Management Booking##
 ***This project is a hotel booking platform designed to offer a seamless user experience with a focus on UI/UX. It allows users to browse available hotels, make bookings, and view booking details. The project is built with modern web technologies and includes a partially functioned backend***
 
 **How to Run and Demonstrate Project**
@@ -10,7 +10,7 @@
 npm install
 npm run dev
 ```
-##Features
+##Features##
 1.Hotel Browsing: View available hotels with detailed information.
 2.Search Functionality: Filter hotels by city or name.
 3.Booking System: Book a hotel with options for partial or full booking.
