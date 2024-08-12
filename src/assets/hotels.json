@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "name": "Grand Plaza Hotel",
+    "location": "Metropolis City",
+    "price": 2000,
+    "ratings": 4.7,
+    "amenities": "Free Wi-Fi, Pool, Spa",
+    "description": "Experience luxury at its best in the heart of Metropolis City. Grand Plaza Hotel offers stunning views and world-class amenities.",
+    "image": "/img/img1.jpg",
+    "city": "Pune",
+    "rooms": [
+      { "type": "Deluxe Suite", "price": 2500, "availability": true },
+      { "type": "Standard Room", "price": 1500, "availability": false }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sunset Resort",
+    "location": "Beachfront Paradise",
+    "price": 1800,
+    "ratings": 4.5,
+    "amenities": "Beach Access, Restaurant, Fitness Center",
+    "description": "Unwind in the tranquility of Beachfront Paradise at Sunset Resort. A perfect getaway with pristine beaches and breathtaking sunsets.",
+    "image": "/img/img2.jpg",
+    "city": "Mumbai",
+    "rooms": [
+      { "type": "Ocean View Room", "price": 2000, "availability": true },
+      { "type": "Garden View Room", "price": 1800, "availability": true }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mountain Retreat Lodge",
+    "location": "Serenity Valley",
+    "price": 1500,
+    "ratings": 4.8,
+    "amenities": "Hiking Trails, Spa, Mountain Views",
+    "description": "Escape to the peaceful surroundings of Serenity Valley. Mountain Retreat Lodge offers a cozy retreat with stunning mountain views.",
+    "image": "/img/img3.jpg",
+    "city": "Kokan",
+    "rooms": [
+      { "type": "Mountain View Room", "price": 1700, "availability": true },
+      { "type": "Valley View Room", "price": 1500, "availability": false }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Urban Oasis Inn",
+    "location": "City Center",
+    "price": 1200,
+    "ratings": 4.2,
+    "amenities": "Free Wi-Fi, Breakfast, Gym",
+    "description": "Discover comfort and convenience at Urban Oasis Inn. Centrally located in the bustling City Center, it's the perfect choice for urban explorers.",
+    "image": "/img/img4.jpg",
+    "city": "Delhi",
+    "rooms": [
+      { "type": "City View Room", "price": 1300, "availability": true },
+      { "type": "Standard Room", "price": 1200, "availability": true }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lakeside Lodge",
+    "location": "Tranquil Lakeside",
+    "price": 1600,
+    "ratings": 4.6,
+    "amenities": "Lake Access, Kayaking, Nature Trails",
+    "description": "Enjoy serenity by the lake at Lakeside Lodge. A retreat surrounded by nature, offering peace and relaxation.",
+    "image": "/img/img5.jpg",
+    "city": "Pune",
+    "rooms": [
+      { "type": "Lakeside Room", "price": 1700, "availability": true },
+      { "type": "Nature View Room", "price": 1600, "availability": false }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Skyline View Hotel",
+    "location": "Downtown Heights",
+    "price": 2200,
+    "ratings": 4.9,
+    "amenities": "City Views, Rooftop Bar, Spa",
+    "description": "Elevate your experience at Skyline View Hotel. Located in the vibrant Downtown Heights, it offers breathtaking views of the city skyline.",
+    "image": "/img/img6.jpg",
+    "city": "Mumbai",
+    "rooms": [
+      { "type": "Penthouse Suite", "price": 3000, "availability": true },
+      { "type": "City View Room", "price": 2200, "availability": true }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Harbor Lights Resort",
+    "location": "Coastal Harbor",
+    "price": 1900,
+    "ratings": 4.4,
+    "amenities": "Beachfront, Pool, Restaurant",
+    "description": "Experience coastal charm at Harbor Lights Resort. Nestled by the sea, it's a perfect destination for those seeking seaside tranquility.",
+    "image": "/img/img7.jpg",
+    "city": "Shimla",
+    "rooms": [
+      { "type": "Harbor View Room", "price": 2100, "availability": false },
+      { "type": "Standard Room", "price": 1900, "availability": true }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Green Valley Retreat",
+    "location": "Nature's Haven",
+    "price": 1400,
+    "ratings": 4.5,
+    "amenities": "Nature Trails, Garden, Yoga Classes",
+    "description": "Immerse yourself in nature at Green Valley Retreat. Surrounded by lush greenery, it's a haven for nature enthusiasts.",
+    "image": "/img/img8.jpg",
+    "city": "Madya Pradesh",
+    "rooms": [
+      { "type": "Garden View Room", "price": 1500, "availability": true },
+      { "type": "Standard Room", "price": 1400, "availability": false }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Pinnacle Heights Hotel",
+    "location": "Mountain Peak",
+    "price": 2500,
+    "ratings": 4.8,
+    "amenities": "Luxury Spa, Helipad, Mountain Views",
+    "description": "Reach new heights of luxury at Pinnacle Heights Hotel. Perched on a mountain peak, it offers a luxurious retreat with stunning views.",
+    "image": "/img/img9.jpg",
+    "city": "Jammu & Kashmir",
+    "rooms": [
+      { "type": "Luxury Suite", "price": 3000, "availability": true },
+      { "type": "Mountain View Room", "price": 2500, "availability": false }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Royal Garden Inn",
+    "location": "Botanical Paradise",
+    "price": 1800,
+    "ratings": 4.6,
+    "amenities": "Botanical Gardens, Pool, Fine Dining",
+    "description": "Step into a botanical paradise at Royal Garden Inn. A lush oasis of tranquility, perfect for those who appreciate nature's beauty.",
+    "image": "/img/img10.jpg",
+    "city": "Pune",
+    "rooms": [
+      { "type": "Botanical View Room", "price": 1900, "availability": true },
+      { "type": "Standard Room", "price": 1800, "availability": false }
+    ]
+  },
+
+{
+  "id": 11,
+  "name": "Golden Sands Resort",
+  "location": "Desert Oasis",
+  "price": 2000,
+  "ratings": 4.7,
+  "amenities": "Desert Tours, Spa, Oasis Views",
+  "description": "Escape to the mesmerizing beauty of the Desert Oasis at Golden Sands Resort. A luxurious retreat in the heart of the desert.",
+  "image": "/img/img11.jpg",
+  "city": "Pune",
+  "availability": {
+    "totalRooms": 100,
+    "availableRooms": 30
+  },
+  "rooms": [
+    { "name": "Ocean View Room", "type": "Room", "price": 2000, "availability": true },
+    { "name": "Garden View Room", "type": "Room", "price": 1800, "availability": true },
+    { "name": "Standard Room", "type": "Room", "price": 1600, "availability": false }
+  ]
+},
+{
+  "id": 12,
+  "name": "Alpine Lodge",
+  "location": "Alpine Retreat",
+  "price": 1700,
+  "ratings": 4.5,
+  "amenities": "Ski Resort, Fireplace, Mountain Views",
+  "description": "Experience the charm of the Alpine Retreat at Alpine Lodge. Surrounded by snow-capped peaks, it's a perfect destination for winter enthusiasts.",
+  "image": "/img/img12.jpg",
+  "city": "Pune",
+  "availability": {
+    "totalRooms": 90,
+    "availableRooms": 20
+  },
+  "rooms": [
+    { "name": "Ocean View Room", "type": "Room", "price": 2000, "availability": true },
+    { "name": "Garden View Room", "type": "Room", "price": 1800, "availability": true },
+    { "name": "Standard Room", "type": "Room", "price": 1600, "availability": false }
+  ]
+},
+{
+  "id": 13,
+  "name": "Countryside Manor",
+  "location": "Rural Serenity",
+  "price": 1300,
+  "ratings": 4.3,
+  "amenities": "Countryside Views, Outdoor Dining, Horseback Riding",
+  "description": "Embrace the tranquility of Rural Serenity at Countryside Manor. A charming escape in the heart of the countryside.",
+  "image": "/img/img13.jpg",
+  "city": "Pune",
+  "availability": {
+    "totalRooms": 75,
+    "availableRooms": 10
+  },
+  "rooms": [
+    { "name": "Ocean View Room", "type": "Room", "price": 2000, "availability": true },
+    { "name": "Garden View Room", "type": "Room", "price": 1800, "availability": true },
+    { "name": "Standard Room", "type": "Room", "price": 1600, "availability": false }
+  ]
+},
+{
+  "id": 14,
+  "name": "Island Paradise Resort",
+  "location": "Tropical Island",
+  "price": 2400,
+  "ratings": 4.9,
+  "amenities": "Private Beach, Water Sports, Tropical Gardens",
+  "description": "Discover paradise on a Tropical Island at Island Paradise Resort. Pristine beaches, azure waters, and luxurious accommodations await.",
+  "image": "/img/img14.jpg",
+  "city": "Pune",
+  "availability": {
+    "totalRooms": 120,
+    "availableRooms": 50
+  },
+  "rooms": [
+    { "name": "Ocean View Room", "type": "Room", "price": 2000, "availability": true },
+    { "name": "Garden View Room", "type": "Room", "price": 1800, "availability": true },
+    { "name": "Standard Room", "type": "Room", "price": 1600, "availability": false }
+  ]
+},
+{
+  "id": 15,
+  "name": "Historic Heritage Hotel",
+  "location": "Old Town Square",
+  "price": 1600,
+  "ratings": 4.6,
+  "amenities": "Historic Tours, Fine Dining, Antique Decor",
+  "description": "Step back in time at the Historic Heritage Hotel. Located in Old Town Square, it offers a blend of history and modern comfort.",
+  "image": "/img/img15.jpg",
+  "city": "Pune",
+  "availability": {
+    "totalRooms": 80,
+    "availableRooms": 25
+  },
+  "rooms": [
+    { "name": "Ocean View Room", "type": "Room", "price": 2000, "availability": true },
+    { "name": "Garden View Room", "type": "Room", "price": 1800, "availability": true },
+    { "name": "Standard Room", "type": "Room", "price": 1600, "availability": false }
+  ]
+},
+{
+  "id": 16,
+  "name": "Majestic Mansion",
+  "location": "Elegant District",
+  "price": 2800,
+  "ratings": 4.8,
+  "amenities": "Private Butler, Ballroom, Luxury Spa",
+  "description": "Indulge in opulence at Majestic Mansion. Located in the Elegant District, it offers unparalleled luxury with a private butler and ballroom.",
+  "image": "/img/img16.jpg",
+  "city": "Pune",
+  "availability": {
+    "totalRooms": 70,
+    "availableRooms": 20
+  },
+  "rooms": [
+    { "name": "Ocean View Room", "type": "Room", "price": 2000, "availability": true },
+    { "name": "Garden View Room", "type": "Room", "price": 1800, "availability": true },
+    { "name": "Standard Room", "type": "Room", "price": 1600, "availability": false }
+  ]
+}
+]
