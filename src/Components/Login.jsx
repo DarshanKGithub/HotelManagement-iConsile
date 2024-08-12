@@ -40,19 +40,17 @@ function Login() {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    console.log('Form Data:', data);
     try {
-      const response = await axios.post('http://10.42.0.242:3000/api/login', data);
-      console.log('Login Success:', response.data);
-      Cookies.set('token', response.data.token, { expires: 7 });
-      navigate('/home');
+        const response = await axios.post('http://localhost:3000/api/login', data);
+        Cookies.set('token', response.data.token, { expires: 7 });
+        navigate('/home');
     } catch (error) {
-      console.error('Login Error:', error.response?.data || error.message);
-      alert('Login failed: ' + (error.response?.data.message || error.message));
+        console.error('Login Error:', error.response?.data || error.message);
+        alert('Login failed: ' + (error.response?.data.message || error.message));
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
-  };
+};
 
   return (
     <div className="flex items-center justify-center h-full py-48">

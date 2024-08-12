@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'; // Import eye icons
 
@@ -10,20 +9,13 @@ function AdminLogin() {
     const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        try {
-            const response = await axios.post('', { email, password });
-            console.log('Login success:', response.data);
-            localStorage.setItem('adminToken', response.data.token); // Store the token
-            navigate('/admin'); // Redirect to the admin dashboard
-        } catch (error) {
-            console.error('Login error:', error);
-            alert('Invalid credentials');
-        } finally {
-            setLoading(false);
-        }
+        // Directly navigate to the admin dashboard
+        setTimeout(() => {
+            navigate('/admin');
+        }, 1000); // Simulate a delay for better UX
     };
 
     return (
@@ -56,7 +48,7 @@ function AdminLogin() {
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute inset-y-0 right-0 flex items-center pr-3 mt-6 text-gray-400"
                     >
-                        {showPassword ? <AiFillEyeInvisible   size={20} /> : <AiFillEye size={20} />}
+                        {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
                     </button>
                 </div>
                 <button

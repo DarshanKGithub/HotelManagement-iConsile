@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { FaEnvelope } from 'react-icons/fa';
+import axios from 'axios';
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
 
-  const handleForgotPassword = (e) => {
+  const handleForgotPassword = async (e) => {
     e.preventDefault();
-    // Add logic to handle forgot password here
-    console.log('Forgot Password for Email:', email);
+    try {
+      await axios.post('', { email });
+      alert('A password reset link has been sent to your email.');
+    } catch (error) {
+      console.error('Error sending reset link:', error);
+      alert('There was an issue sending the reset link. Please try again.');
+    }
   };
 
   return (
@@ -16,7 +22,6 @@ function ForgotPassword() {
         <h2 className="text-2xl text-white font-bold text-center mb-6">Forgot Password</h2>
         
         <form onSubmit={handleForgotPassword}>
-          {/* Email Input */}
           <div className="mb-4">
             <label className="block text-slate-100 font-bold mb-2" htmlFor="email">
               Email
@@ -34,12 +39,10 @@ function ForgotPassword() {
               />
             </div>
           </div>
-
-          {/* Submit Button */}
           <div className="flex items-center justify-between">
             <button
               type="submit"
-              className=" bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-cyan-900 transition duration-300"
+              className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-cyan-900 transition duration-300"
             >
               Send Reset Link
             </button>

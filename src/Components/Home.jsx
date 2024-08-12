@@ -83,57 +83,57 @@ function Home() {
       </div>
 
       <form onSubmit={handleSearch} className="max-w-4xl mx-auto bg-transparent p-6 rounded-lg shadow-md">
-  <div className="flex flex-wrap gap-4 justify-center">
-    <div className="flex-1 min-w-[200px] mb-4">
-      <label className="block text-white font-bold mb-2" htmlFor="check-in">
-        Check-In Date
-      </label>
-      <input
-        type="date"
-        id="check-in"
-        value={checkInDate}
-        onChange={(e) => setCheckInDate(e.target.value)}
-        className="w-full p-2 border border-gray-300 text-white bg-transparent rounded-lg"
-      />
-    </div>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex-1 min-w-[200px] mb-4">
+            <label className="block text-white font-bold mb-2" htmlFor="check-in">
+              Check-In Date
+            </label>
+            <input
+              type="date"
+              id="check-in"
+              value={checkInDate}
+              onChange={(e) => setCheckInDate(e.target.value)}
+              className="w-full p-2 border border-gray-300 text-white bg-transparent rounded-lg"
+            />
+          </div>
 
-    <div className="flex-1 min-w-[200px] mb-4">
-      <label className="block text-white font-bold mb-2" htmlFor="check-out">
-        Check-Out Date
-      </label>
-      <input
-        type="date"
-        id="check-out"
-        value={checkOutDate}
-        onChange={(e) => setCheckOutDate(e.target.value)}
-        className="w-full p-2 border border-gray-300 text-white bg-transparent rounded-lg"
-      />
-    </div>
+          <div className="flex-1 min-w-[200px] mb-4">
+            <label className="block text-white font-bold mb-2" htmlFor="check-out">
+              Check-Out Date
+            </label>
+            <input
+              type="date"
+              id="check-out"
+              value={checkOutDate}
+              onChange={(e) => setCheckOutDate(e.target.value)}
+              className="w-full p-2 border border-gray-300 text-white bg-transparent rounded-lg"
+            />
+          </div>
 
-    <div className="flex-1 min-w-[200px] mb-4">
-      <label className="block text-white font-bold mb-2" htmlFor="city">
-        City Location
-      </label>
-      <input
-        type="text"
-        id="city"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city"
-        className="w-full p-2 border border-gray-300 text-white bg-transparent rounded-lg"
-      />
-    </div>
+          <div className="flex-1 min-w-[200px] mb-4">
+            <label className="block text-white font-bold mb-2" htmlFor="city">
+              City Location
+            </label>
+            <input
+              type="text"
+              id="city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              placeholder="Enter city"
+              className="w-full p-2 border border-gray-300 text-white bg-transparent rounded-lg"
+            />
+          </div>
 
-    <div className="flex items-end mb-4">
-      <button
-        type="submit"
-        className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
-      >
-        Search
-      </button>
-    </div>
-  </div>
-</form>
+          <div className="flex items-end mb-4">
+            <button
+              type="submit"
+              className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
 
       <div className="mt-8 relative">
         <h2 className="text-2xl font-bold mb-4 text-center text-white">Recommended Hotels</h2>
@@ -143,21 +143,20 @@ function Home() {
             {recommendedHotels.map((hotel) => (
               <motion.div
                 key={hotel.id}
-                className="bg-cover bg-center bg-no-repeat p-4 border border-gray-300 rounded-lg shadow-md w-80 h-64 inline-block"
+                className="bg-cover bg-center bg-no-repeat p-2 border border-gray-300 rounded-lg shadow-md w-80 h-64 inline-block"
                 style={{ backgroundImage: `url(${hotel.image})` }}
                 whileHover={{ scale: 1.1 }}
                 onClick={() => handleBookNow(hotel)}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                <div className="bg-white bg-opacity-75 p-1 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-2">{hotel.name}</h3>
-                  <p className="text-zinc-900 mb-2">City: {hotel.city}</p>
-                  <p className="text-zinc-900 mb-2">Price: {hotel.price}</p>
-                  <p className="text-zinc-900 mb-2">Rating: {hotel.ratings}</p>
-                  <p className="text-zinc-900 mb-2">Amenities: {hotel.amenities}</p>
+                <div className="bg-white bg-opacity-75 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-2">{hotel.name}</h3>
+                  <p className="text-zinc-900 font-semibold mb-2">Price: {hotel.price}</p>
+                  <p className="text-zinc-900 font-semibold mb-2">Rating: {hotel.ratings}</p>
+                  <p className="text-zinc-900 font-semibold mb-2">Amenities: {hotel.amenities}</p>
                   <button
                     onClick={() => handleBookNow(hotel)}
-                    className="mt-0 bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 w-full"
+                    className="mt-4 bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 w-full"
                   >
                     Book Now
                   </button>
@@ -193,34 +192,31 @@ function Home() {
 
         <div className="overflow-x-auto whitespace-nowrap scrollbar-hidden" ref={scrollContainerRef}>
           <div className="flex gap-6">
-            {filteredHotels.length > 0 ? (
-              filteredHotels.map((hotel) => (
-                <motion.div
-                  key={hotel.id}
-                  className={`bg-cover bg-center bg-no-repeat p-4 border border-gray-300 rounded-lg shadow-md w-80 h-64 inline-block ${selectedHotel === hotel.id ? 'relative z-20' : 'opacity-510 filter '}`}
-                  style={{ backgroundImage: `url(${hotel.image})` }}
-                  whileHover={{ scale: 1.1 }}
-                  onClick={() => setSelectedHotel(hotel.id)}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <div className="bg-white bg-opacity-75 p-1 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-2">{hotel.name}</h3>
-                    <p className="text-zinc-900 mb-2">City: {hotel.city}</p>
-                    <p className="text-zinc-900 mb-2">Price: {hotel.price}</p>
-                    <p className="text-zinc-900 mb-2">Rating: {hotel.ratings}</p>
-                    <p className="text-zinc-900 mb-2">Amenities: {hotel.amenities}</p>
-                    <button
-                      onClick={() => handleBookNow(hotel)}
-                      className="mt-0 bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 w-full"
-                    >
-                      Book Now
-                    </button>
-                  </div>
-                </motion.div>
-              ))
-            ) : (
-              <p className="text-center text-white">No hotels found for the selected criteria, Please do visit first</p>
-            )}
+            {filteredHotels.map((hotel) => (
+              <motion.div
+                key={hotel.id}
+                className="bg-cover bg-center bg-no-repeat p-2 border border-gray-300 rounded-lg shadow-md w-80 h-64 inline-block"
+                style={{ backgroundImage: `url(${hotel.image})` }}
+                whileHover={{ scale: 1.1 }}
+                onClick={() => handleBookNow(hotel)}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <div className="bg-white bg-opacity-75 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-2">{hotel.name}</h3>
+                  <p className="text-zinc-900 font-semibold mb-2">Price: {hotel.price}</p>
+                  <p className="text-zinc-900 font-semibold mb-2">Rating: {hotel.ratings}</p>
+                  <p className="text-zinc-900 font-semibold mb-2 text-ellipsis overflow-hidden whitespace-nowrap max-w-full">
+                    Amenities: {hotel.amenities}
+                  </p>
+                  <button
+                    onClick={() => handleBookNow(hotel)}
+                    className="mt-4 bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 w-full"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

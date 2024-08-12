@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 
 function BookingForm() {
   const location = useLocation();
+  const navigate = useNavigate();
   const hotel = location.state.hotel;
 
   const [selectedRoom, setSelectedRoom] = useState('');
@@ -11,6 +12,7 @@ function BookingForm() {
   const [email, setEmail] = useState('');
 
   const handleGeneratePDF = () => {
+    // Generate PDF
     const doc = new jsPDF();
     doc.text(`Booking Confirmation`, 10, 10);
     doc.text(`Hotel: ${hotel.name}`, 10, 20);
@@ -18,6 +20,27 @@ function BookingForm() {
     doc.text(`Name: ${userName}`, 10, 40);
     doc.text(`Email: ${email}`, 10, 50);
     doc.save(`${hotel.name}_Booking_Confirmation.pdf`);
+
+    // Show alert after PDF generation
+    alert('Booking confirmed!');
+
+    // Simulate saving booking details to JSON file (or local storage)
+    saveBookingDetails({
+      userName,
+      email,
+      hotelId: hotel.id,
+      room: selectedRoom
+    });
+
+    // Redirect to a success page or any other appropriate page
+    navigate('/booking-success', { state: { userName, hotel } });
+  };
+
+  const saveBookingDetails = (booking) => {
+    // Simulate saving to a JSON file by saving to local storage
+    const existingBookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+    existingBookings.push(booking);
+    localStorage.setItem('bookings', JSON.stringify(existingBookings));
   };
 
   return (

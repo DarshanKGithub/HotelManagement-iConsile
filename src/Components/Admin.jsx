@@ -4,12 +4,14 @@ import axios from 'axios';
 function AdminDashboard() {
     const [visits, setVisits] = useState([]);
     const [bookings, setBookings] = useState([]);
+    const [confirmedBookings, setConfirmedBookings] = useState([]);
     const [visitStatus, setVisitStatus] = useState('pending');
     const [bookingStatus, setBookingStatus] = useState('partial');
 
     useEffect(() => {
         fetchVisits();
         fetchBookings();
+        fetchConfirmedBookings(); // Fetch confirmed bookings initially
     }, [visitStatus, bookingStatus]);
 
     const fetchVisits = async () => {
@@ -36,6 +38,18 @@ function AdminDashboard() {
         }
     };
 
+    const fetchConfirmedBookings = async () => {
+        try {
+            const token = localStorage.getItem('adminToken');
+            const response = await axios.get('http://10.42.0.242:3000/api/admin/bookings/status/confirmed', {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            setConfirmedBookings(response.data);
+        } catch (error) {
+            console.error('Error fetching confirmed bookings:', error);
+        }
+    };
+
     const handleConfirmBooking = async (bookingId) => {
         try {
             const token = localStorage.getItem('adminToken');
@@ -43,13 +57,14 @@ function AdminDashboard() {
                 headers: { Authorization: `Bearer ${token}` },
             });
             fetchBookings(); // Refresh the list after confirming
+            fetchConfirmedBookings(); // Refresh the confirmed bookings
         } catch (error) {
             console.error('Error confirming booking:', error);
         }
     };
 
     return (
-        <div className="admin-dashboard p-8  text-white">
+        <div className="admin-dashboard p-8 text-white">
             <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
 
             <div className="visits-section mb-12">
@@ -121,6 +136,29 @@ function AdminDashboard() {
                                         </button>
                                     )}
                                 </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
+            <div className="confirmed-bookings-section mt-12">
+                <h2 className="text-2xl font-bold mb-4">Confirmed Bookings Summary</h2>
+                <p>Total Confirmed Bookings: {confirmedBookings.length}</p>
+                <table className="min-w-full bg-gray-800 rounded-lg overflow-hidden mt-4">
+                    <thead>
+                        <tr className="border-b border-gray-700">
+                            <th className="px-4 py-2">Booking ID</th>
+                            <th className="px-4 py-2">User Name</th>
+                            <th className="px-4 py-2">User ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {confirmedBookings.map((booking) => (
+                            <tr key={booking.id}>
+                                <td className="px-4 py-2">{booking.id}</td>
+                                <td className="px-4 py-2">{booking.user_name}</td> {/* Assuming user_name is available */}
+                                <td className="px-4 py-2">{booking.user_id}</td>
                             </tr>
                         ))}
                     </tbody>

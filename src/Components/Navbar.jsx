@@ -30,7 +30,7 @@ function Navbar() {
          iConcile
         </span>
       </div>
-
+{/* 
       {/* SearchBar for searching the hotels */}
       <div className="flex-1 mx-4 relative">
         <input
@@ -56,7 +56,7 @@ function Navbar() {
             ))}
           </ul>
         )}
-      </div>
+      </div> 
 
       {/* Buttons */}
       <div className="flex items-center space-x-4">

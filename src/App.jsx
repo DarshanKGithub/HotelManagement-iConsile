@@ -11,6 +11,7 @@ import HotelDetails from './Components/HotelDetails';
 import BookingForm from './Components/BookingForm';
 import Admin from './Components/Admin';
 import AdminLogin from './Components/AdminLogin';
+import Forgot from './Components/Forgot';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/confirmed-booking" element={<BookingForm />} />
             <Route path='/admin' element={<Admin/>} />
             <Route path='/admin-login' element={<AdminLogin/>} />
+            <Route path='/reset-password' element={<Forgot/>} />
           </Routes>
         </div>
       </div>
