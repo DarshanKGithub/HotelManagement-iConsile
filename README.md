@@ -8,9 +8,7 @@ This project is a hotel booking platform designed to offer a seamless user exper
 4.open terminal, type
 ```bash
 npm install
-and
 npm run dev
-localhost work
 ```
 ##Features
 1.Hotel Browsing: View available hotels with detailed information.
