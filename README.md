@@ -1,5 +1,5 @@
 #Hotel-Management Booking
-This project is a hotel booking platform designed to offer a seamless user experience with a focus on UI/UX. It allows users to browse available hotels, make bookings, and view booking details. The project is built with modern web technologies and includes a partially functioned backend
+***This project is a hotel booking platform designed to offer a seamless user experience with a focus on UI/UX. It allows users to browse available hotels, make bookings, and view booking details. The project is built with modern web technologies and includes a partially functioned backend***
 
 **How to Run and Demonstrate Project**
 1.Download the zip file.
