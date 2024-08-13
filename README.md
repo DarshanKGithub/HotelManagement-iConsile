@@ -30,7 +30,7 @@ npm run dev
 2. Backend-Github: https://github.com/DarshanKGithub/Hotel-Management-Backend-.git
 
 ## Overview Video Of Project
-Project-Video: https://drive.google.com/drive/folders/1-U2ZBQG1D5oLVgKh1MJ7JnuHVcV2Ym3u
+Project-Video: https://drive.google.com/file/d/1u9uKbBvWnzMbJAETqwA_LSYVxnwBeRcl/view?usp=sharing
 
 For this assignment my focus was on frontend (UI/UX). 
 For backend I did Registration and Login Database and API using NodeJs and Express.
