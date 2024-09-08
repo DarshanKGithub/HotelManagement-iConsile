@@ -12,7 +12,7 @@ const schema = yup.object().shape({
   email: yup.string().email('Invalid email').required('Email is required'),
   confirmEmail: yup.string().oneOf([yup.ref('email'), null], 'Emails must match').required('Confirm Email is required'),
   phone: yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required('Phone number is required'),
-  password: yup.string().min(8, 'Password must be at least 8 characters').required('Password is required'),
+  password: yup.string().min(8, 'Password must be at least 10 characters').required('Password is required'),
   confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match').required('Confirm Password is required'),
 });
 
@@ -24,7 +24,7 @@ function Register() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://10.42.0.242:3000/api/register', data);
+      const response = await axios.post('http//localhost:3000/register', data);
       console.log('Registration successful:', response.data);
       alert('You have successfully created an account!');
       navigate('/home');

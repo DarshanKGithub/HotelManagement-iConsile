@@ -41,7 +41,7 @@ function Login() {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-        const response = await axios.post('http://localhost:3000/api/login', data);
+        const response = await axios.post('http://localhost:3000/login', data);
         Cookies.set('token', response.data.token, { expires: 7 });
         navigate('/home');
     } catch (error) {

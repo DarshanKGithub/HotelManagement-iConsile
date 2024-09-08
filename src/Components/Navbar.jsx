@@ -21,13 +21,13 @@ function Navbar() {
 
   return (
     <div className="relative flex items-center justify-between p-4 shadow-md bg-gray-800">
-      {/* DKODER's LOGO */}
+     
       <div 
         className="flex items-center cursor-pointer" 
         onClick={() => navigate('/')}
       >
         <span className="text-2xl text-white font-bold ml-3 hover:text-zinc-900 transition duration-300">
-         iConcile
+       D-Resto
         </span>
       </div>
 {/* 
